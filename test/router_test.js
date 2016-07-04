@@ -15,9 +15,9 @@ describe('crud app tests', () => {
   });
 
   it('should map routes to controllers', function() {
-    module('crudApp');
+    angular.module('crudApp');
 
-    inject(function($route) {
+    angular.mock.inject(function($route) {
 
       expect($route.routes['/list'].controller).toBe('ListController');
       expect($route.routes['/list'].templateUrl).
